@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepthFirstTraversal", "Dept
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVLTree", "MyAVLTree\AVLTree.csproj", "{96F45F30-1B47-40F9-9A21-03A7FB857F70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinomialTree", "BinomialTree\BinomialTree.csproj", "{44129AF8-0965-4E87-AD30-B5F9313B3F49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{96F45F30-1B47-40F9-9A21-03A7FB857F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F45F30-1B47-40F9-9A21-03A7FB857F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96F45F30-1B47-40F9-9A21-03A7FB857F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44129AF8-0965-4E87-AD30-B5F9313B3F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44129AF8-0965-4E87-AD30-B5F9313B3F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44129AF8-0965-4E87-AD30-B5F9313B3F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44129AF8-0965-4E87-AD30-B5F9313B3F49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

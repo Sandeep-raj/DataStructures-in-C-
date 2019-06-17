@@ -217,6 +217,70 @@ namespace Hashing
 
             hashTable = newHashTable;
         }
+        public bool Find(T item)
+        {
+            long hash = hashFunction(item);
+            if(getType() == "int")
+            {
+                for (int i = 0; i < hashTable[hash].Length; i++)
+                {
+                    if((int)(object)hashTable[hash][i] != default(int))
+                    {
+                        if((int)(object)hashTable[hash][i] == (int)(object)item)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            if (getType() == "string")
+            {
+                for (int i = 0; i < hashTable[hash].Length; i++)
+                {
+                    if ((string)(object)hashTable[hash][i] != default(string))
+                    {
+                        if ((string)(object)hashTable[hash][i] == (string)(object)item)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        public IEnumerable<T> Getelements()
+        {
+            if(getType() == "int")
+            {
+                for (int i = 0; i < hashTable.Length; i++)
+                {
+                    for(int j = 0; j < hashTable[i].Length; j++)
+                    {
+                        if ((int)(object)hashTable[i][j] != default(int))
+                        {
+                            yield return hashTable[i][j];
+                        }
+                        else
+                            break;
+                    }
+                }
+            }
+            if (getType() == "string")
+            {
+                for (int i = 0; i < hashTable.Length; i++)
+                {
+                    for (int j = 0; j < hashTable[i].Length; j++)
+                    {
+                        if ((string)(object)hashTable[i][j] != default(string))
+                        {
+                            yield return hashTable[i][j];
+                        }
+                        else
+                            break;
+                    }
+                }
+            }
+        }
     }
     class Program
     {
@@ -230,6 +294,13 @@ namespace Hashing
             hash.Add(4);
             hash.Add(5);
             hash.Add(6);
+            var x = hash.Find(4);
+            var lx = hash.Getelements();
+            Hash<string> hash2 = new Hash<string>();
+            hash2.Add("Sandeep");
+            hash2.Add("Prabhjyot");
+            var y = hash2.Find("Siddhant");
+            var ly = hash2.Getelements();
             Console.ReadKey();
         }
     }
